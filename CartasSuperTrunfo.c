@@ -9,6 +9,9 @@ int main() {
     float area = 1.0; // Área da cidade em km²
     float pib = 1.0; // PIB da cidade em bilhões de reais
     int pontos_turisticos = 1; // Número de pontos turísticos da cidade
+    float densidadePopulacional = 1.0; // Valor da população dividio pela área
+    float pibPerCapita = 1.0; // Valor do PIB em reais dividido pela população
+    float pibEmReais = 1.0; // Valor do PIB em reais
 
     // Cadastro da 1ª cidade
     // Cadastro do estado
@@ -39,9 +42,14 @@ int main() {
     printf("Digite a quantidade de pontos turísticos da 1ª cidade: ");
     scanf("%i", &pontos_turisticos);
 
+    // Calcula a densidade populacional e PIB per capita com os dados fornecidos da cidade 1
+    densidadePopulacional = (float) populacao / area; // Divide a população pela área
+    pibEmReais = (float) pib * 1000000000, // Converte o PIB de bilhões de reais para reais
+    pibPerCapita = (float) pibEmReais / populacao; // Divide o PIB em reais pela população
+
     // Exibição dos dados cadastrados
-    printf("\nCarta 1:\nEstado: %c\nCódigo: %c%s\nNome da Cidade: %s\nPopulação: %i\nÁrea: %.2f km²\nPIB: %.2f bilhões de reais\nNúmero de Pontos Turísticos: %i\n", 
-           estado, estado, codigo, nome, populacao, area, pib, pontos_turisticos);
+    printf("\nCarta 1:\nEstado: %c\nCódigo: %c%s\nNome da Cidade: %s\nPopulação: %i\nÁrea: %.2f km²\nPIB: %.2f bilhões de reais\nNúmero de Pontos Turísticos: %i\nDensidade Populacional: %.2f Hab/km²\nPIB per capita: R$ %.2f/Hab\n", 
+           estado, estado, codigo, nome, populacao, area, pib, pontos_turisticos, densidadePopulacional, pibPerCapita);
 
     // Cadastro da 2ª cidade
     // Cadastro do estado
@@ -72,8 +80,13 @@ int main() {
     printf("Digite a quantidade de pontos turísticos da 2ª cidade: ");
     scanf("%i", &pontos_turisticos);
 
+    // Calcula a densidade populacional e PIB per capita com os dados fornecidos da cidade 2
+    densidadePopulacional = (float) populacao / area; // Divide a população pela área
+    pibEmReais = (float) pib * 1000000000, // Converte o PIB de bilhões de reais para reais
+    pibPerCapita = (float) pibEmReais / populacao; // Divide o PIB em reais pela população
+    
     // Exibição dos dados cadastrados
-    printf("\nCarta 2:\nEstado: %c\nCódigo: %c%s\nNome da Cidade: %s\nPopulação: %i\nÁrea: %.2f km²\nPIB: %.2f bilhões de reais\nNúmero de Pontos Turísticos: %i\n", 
-           estado, estado, codigo, nome, populacao, area, pib, pontos_turisticos);
+    printf("\nCarta 2:\nEstado: %c\nCódigo: %c%s\nNome da Cidade: %s\nPopulação: %i\nÁrea: %.2f km²\nPIB: %.2f bilhões de reais\nNúmero de Pontos Turísticos: %i\nDensidade Populacional: %.2f Hab/km²\nPIB per capita: R$ %.2f/Hab\n", 
+           estado, estado, codigo, nome, populacao, area, pib, pontos_turisticos, densidadePopulacional, pibPerCapita);
     return 0;
 }
