@@ -8,6 +8,7 @@ int main() {
 
     unsigned int populacao1 = 1, populacao2 = 2; // População da cidade
     int pontosTuristicos1 = 1, pontosTuristicos2 = 2; // Número de pontos turísticos da cidade
+    int comparativo = 0; // Variável usada para comparar dois valores
     
     float area1 = 1.0, area2 = 2.0; // Área da cidade em km²
     float pib1 = 1.0, pib2 = 2.0; // PIB da cidade em bilhões de reais
@@ -99,8 +100,55 @@ int main() {
            estado2, estado2, codigo2, nome2, populacao2, area2, pib2, pontosTuristicos2, densidadePopulacional2, pibPerCapita2, superPoder2);
  
     // Comparando valores
-    printf("\nResultado:\nPopulação: Carta %u venceu\nÁrea: Carta %d venceu\nPIB: Carta %d venceu\nNúmero de Pontos Turísticos: Carta %d venceu\nDensidade Populacional: Carta %d venceu\nPIB per capita: Carta %d venceu\nSuper Poder: Carta %d venceu\n", 
-           populacao1 > populacao2, area1 > area2, pib1 > pib2, pontosTuristicos1 > pontosTuristicos2, densidadePopulacional1 < densidadePopulacional2, pibPerCapita1 > pibPerCapita2, superPoder1 > superPoder2);
+    printf("\nResultado:\n");
+
+    // Compara a população e exibe a carta com maior valor
+    if(populacao1 > populacao2){
+       printf("População: Carta 1 venceu\n");
+    } else {
+       printf("População: Carta 2 venceu\n");
+    }
+
+    // Compara a área e exibe a carta com maior valor
+    if(area1 > area2){
+       printf("Área: Carta 1 venceu\n");
+    } else {
+       printf("Área: Carta 2 venceu\n");
+    }
+
+    // Compara o PIB e exibe a carta com maior valor
+    if(pib1 > pib2){
+       printf("PIB: Carta 1 venceu\n");
+    } else {
+       printf("PIB: Carta 2 venceu\n");
+    }
+
+    // Compara o número de pontos turísticos e exibe a carta com maior valor
+    if(pontosTuristicos1 > pontosTuristicos2){
+       printf("Pontos turísticos: Carta 1 venceu\n");
+    } else {
+       printf("Pontos turísticos: Carta 2 venceu\n");
+    }
+
+    // Compara a densidade populacional e exibe a carta com menor valor
+    if(densidadePopulacional1 < densidadePopulacional2){
+       printf("Densidade populacional: Carta 1 venceu\n");
+    } else {
+       printf("Densidade populacional: Carta 2 venceu\n");
+    }
+
+    // Compara o PIB per capita e exibe a carta com maior valor
+    if(pibPerCapita1 > pibPerCapita2){
+       printf("PIB per capita: Carta 1 venceu\n");
+    } else {
+       printf("PIB per capita: Carta 2 venceu\n");
+    }
+
+    if(superPoder1 > superPoder2){
+       printf("Super poder: Carta 1 venceu\n");
+    } else {
+       printf("Super poder: Carta 2 venceu\n");
+    }
 
 
     return 0;
